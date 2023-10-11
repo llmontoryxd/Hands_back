@@ -33,6 +33,7 @@ def parse_website(website: str, hard_search: bool=False) -> str:
     else:
         options = webdriver.FirefoxOptions()
         options.add_argument('--headless')
+        options.set_preference("dom.disable_beforeunload", True)
         driver = webdriver.Firefox(options=options)
         driver.get(website)
         reveal_hidden_number(driver, ['phone'])
