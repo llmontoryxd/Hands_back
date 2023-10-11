@@ -46,6 +46,11 @@ def reveal_hidden_number(driver: webdriver.Firefox, key_words: list[str], timeou
             element.click()
 
 
-websites = ['https://profi.ru/', 'https://hands.ru/company/about/', 'https://repetitors.info/', 'https://mipt.ru/']
+websites = ['https://profi.ru/',
+            'https://hands.ru/',
+            'https://hands.ru/company/about/',
+            'https://repetitors.info/',
+            'https://mipt.ru/']
+
 for website in websites:
     print(f'Page {website}, phones: {get_phone_numbers(website=website, hard_search=True)}')
